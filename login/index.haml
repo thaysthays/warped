@@ -1,0 +1,20 @@
+%button#SignIn Sign in
+.login
+  %button#close.close
+  .top
+    %h2 Login&nbsp;to&nbsp;download&nbsp;area
+  .user
+    %input{name: "username", placeholder: "Mail", type: "text"}/
+  .pw
+    %input#pw{name: "password", placeholder: "Password", type: "password"}/
+  .remlog
+    .remember
+      %input#remember{checked: "checked", name: "remember", type: "checkbox"}/
+      = succeed "remember me" do
+        %label{for: "remember"}
+    %input{type: "submit", value: "Sign in"}/
+  .forgot
+    %h3
+      Forgot your password?
+    %a{href: "#"} click here
+    to order a new password.
