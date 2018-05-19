@@ -55,69 +55,64 @@ if (isset($_POST['btnLogin'])) {
     </div>
 
     <div class="container">
-        <div class="centered_logo container">
-            <div><img src="img/warprgrey.png"></div>
+        <div class="container">
+            <div><img src="img/warprgrey.png" class="centered_logo"></div>
         </div>
 
-        <div>
-            <label for="destaque" class="destaque">Comece já!</label>
-        </div>
-        
-        
-        <input id="tab1" class="tab_input tab1" type="radio" name="tabs" checked>
-        <label for="tab1" class="tab_label tab_label_1">Contratar</label>
-        <input id="tab2" class="tab_input tab2" type="radio" name="tabs">
-        <label for="tab2" class="tab_label tab_label_2">Trabalhar</label>
+        <div class="tab_comp">
+            <input id="tab1" class="tab_input tab1" type="radio" name="tabs" checked>
+            <label for="tab1" class="tab_label tab_label_1">Contratar</label>
+            <input id="tab2" class="tab_input tab2" type="radio" name="tabs">
+            <label for="tab2" class="tab_label tab_label_2">Trabalhar</label>
 
-
-        <div class="content_tab_1">      
-            <div class="content_tab">
-                <div class="content_tab_heading">Cadastre-se</div>
-                <form method="post" action="cadContra.php">
-                <div class="input_white">
-                    <input type="text" name="user1" id="user" placeholder="Nome de usuário" maxlength="12" required="required" />
-                    <input type="text" name="email1" id="email" placeholder="Insira o email" maxlength="20" required="required" />
-                    <div class="msgemail"></div>
-                    <input type="password" name="password1" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+            <div class="content_tab_1">      
+                <div class="content_tab">
+                    <div class="content_tab_heading">Cadastre-se</div>
+                    <form method="post" action="cadContra.php">
+                    <div class="input_white">
+                        <input type="text" name="user1" id="user" placeholder="Nome de usuário" maxlength="12" required="required" />
+                        <input type="text" name="email1" id="email" placeholder="Insira o email" maxlength="20" required="required" />
+                        <div class="msgemail"></div>
+                        <input type="password" name="password1" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+                    </div>
+                        <div class="content_tab_heading">Converse com um Freelancer disponível</div>
+                        <div>
+                            <button class="done_btn" type="submit">Concluir</button>
+                        </div>
+                    </form>       
+                    <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="termos e condições">termos e condições</a> e <a href="política">política de privacidade</a></div>
                 </div>
-                    <div class="content_tab_heading">Converse com um Freelancer disponível</div>
-                    <div>
-                        <button class="done_btn" type="submit">Concluir</button>
-                    </div>
-                </form>       
-                <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="termos e condições">termos e condições</a> e <a href="política">política de privacidade</a></div>
             </div>
-        </div>
-        <div class="content_tab_2">
-            <div class="content_tab">
-                <div class="content_tab_heading">Cadastre-se</div>
-                <form method="post" action="cadFunc.php">
-                    <div class="input_white">
-                        <input type="text" name="user2" id="user" placeholder="Nome de Usuário" maxlength="12" required="required" />
-                        <input type="email" name="email2" id="email" placeholder="Insira o Email" maxlength="20" required="required" />
-                        <div id="msg2email"></div>
-                        <input type="password" name="password2" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
-                    </div>
-                    <div class="content_tab_heading">Escolha o tipo de serviço</div>
-                    <div class="input_white">
-                        <select name="work">
-                            <option value="invalid" disabled selected hidden>Selecione uma categoria de trabalho</option>
-                            <option value="first">First</option>
-                            <option value="second">Second</option>
-                        </select>
-                    </div>
-                    <div class="content_tab_heading">Converse com um Freelancer disponível</div>
-                    <div><button class="done_btn" type="submit">Concluir</button></div>
-                </form>
-                <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="#">termos e condições</a> e <a href="#">política de privacidade</a></div>
+            <div class="content_tab_2">
+                <div class="content_tab">
+                    <div class="content_tab_heading">Cadastre-se</div>
+                    <form method="post" action="cadFunc.php">
+                        <div class="input_white">
+                            <input type="text" name="user2" id="user" placeholder="Nome de Usuário" maxlength="12" required="required" />
+                            <input type="email" name="email2" id="email" placeholder="Insira o Email" maxlength="20" required="required" />
+                            <div id="msg2email"></div>
+                            <input type="password" name="password2" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+                        </div>
+                        <div class="content_tab_heading">Escolha o tipo de serviço</div>
+                        <div class="input_white">
+                            <select name="work">
+                                <option value="invalid" disabled selected hidden>Selecione uma categoria de trabalho</option>
+                                <option value="first">First</option>
+                                <option value="second">Second</option>
+                            </select>
+                        </div>
+                        <div class="content_tab_heading">Converse com um Freelancer disponível</div>
+                        <div><button class="done_btn" type="submit">Concluir</button></div>
+                    </form>
+                    <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="#">termos e condições</a> e <a href="#">política de privacidade</a></div>
+                </div>
             </div>
-        </div>
+        </div>    
     </div>
 
     <div class="footer" class="footer">
     <footer>
         <div class="container line">
-           
             <div class="footer_wrapper">
                 <div class="footer_menu">
                     <ul>

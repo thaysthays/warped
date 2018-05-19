@@ -1,15 +1,29 @@
+.navbar {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(255,255,255,0) 100%);
+    padding: 16px;
+}
+
 .navbar_logo {
     width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
-}.navbar_logo:nth-child(1n) {
+}
+
+.navbar_logo:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
-}.navbar_logo:last-child {
+}
+
+.navbar_logo:last-child {
     margin-right: 0;
-}.navbar_logo:nth-child(2n) {
+}
+
+.navbar_logo:nth-child(2n) {
     margin-right: 0;
     float: right;
-}.navbar_logo:nth-child(2n + 1) {
+}
+
+.navbar_logo:nth-child(2n + 1) {
     clear: both;
 }
 
@@ -35,4 +49,6 @@
 .navbar_login:nth-child(2n + 1) {
     clear: both;
 }
+
+
 /*# sourceMappingURL=navbar.css.map */
