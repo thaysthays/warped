@@ -5,6 +5,7 @@
 @import url('./input.css');
 @import url('./footer.css');
 @import url('./cta.css');
+@import url('./navbar.css');
 
 
 *,
@@ -18,7 +19,7 @@
 html,
 body {
     height: 100%;
-    background-color: red;
+    background-color: cyan;
 }
 
 body {
@@ -35,9 +36,8 @@ body {
     border-bottom: 1px solid #737373;
 }
 
-.imagem {
-    margin-left: 90px;
-    margin-right: 90px;
+.right {
+    float: right;
 }
 
 .enviar {

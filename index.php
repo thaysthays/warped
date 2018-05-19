@@ -33,57 +33,64 @@ if (isset($_POST['btnLogin'])) {
 <body>
 
     <div class="navbar" class="header">
-        <div>
-            <img src="img/warprwhite.png" height="39" width=auto>
+        <div class="container">
+            <div class="navbar_logo">
+                <img src="img/warprwhite.png" height="39" width=auto>
+            </div>
+            <div class="navbar_login">   
+                <?php
+                    if(!isset($_SESSION['logado']))
+                    {
+                ?>
+                <div class="btn right"><a href="login/index.html">ENTRAR</a></div>
+                <?php
+                    } else {
+                ?>
+                <div class="btn right"><a href="?opcao=logout">LOGOUT</a></div>
+                <?php
+                    }
+                ?>
+            </div>
         </div>
-        <?php
-            if(!isset($_SESSION['logado']))
-            {
-        ?>
-        <div class="login" style="float: right"><a href="login/index.html">ENTRAR</a></div>
-        <?php
-            } else {
-        ?>
-        <div class="login" style="float: right"><a href="?opcao=logout">LOGOUT</a></div>
-        <?php
-            }
-        ?>
     </div>
 
     <div class="container">
-        <div class="imagem">
-            <img src="img/warprgrey.png" height="200">
+        <div class="centered_logo container">
+            <div><img src="img/warprgrey.png"></div>
         </div>
 
-        <label for="destaque" class="destaque">Comece já!</label>
-        <div class="tabs">
-            <input id="tab1" class="tab_input tab1" type="radio" name="tabs" checked>
-            <label for="tab1" class="tab_label">Contratar</label>
-            <input id="tab2" class="tab_input tab2" type="radio" name="tabs">
-            <label for="tab2" class="tab_label">Trabalhar</label>
+        <div>
+            <label for="destaque" class="destaque">Comece já!</label>
         </div>
+        
+        
+        <input id="tab1" class="tab_input tab1" type="radio" name="tabs" checked>
+        <label for="tab1" class="tab_label tab_label_1">Contratar</label>
+        <input id="tab2" class="tab_input tab2" type="radio" name="tabs">
+        <label for="tab2" class="tab_label tab_label_2">Trabalhar</label>
 
-        <section class="content_tab_1">      
+
+        <div class="content_tab_1">      
             <div class="content_tab">
-                Cadastre-se
-                    <form method="post" action="cadContra.php">
-                    <div class="input_white">
-                        <input type="text" name="user1" id="user" placeholder="Nome de usuário" maxlength="12" required="required" />
-                        <input type="text" name="email1" id="email" placeholder="Insira o email" maxlength="20" required="required" />
-                        <div class="msgemail"></div>
-                        <input type="password" name="password1" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+                <div class="content_tab_heading">Cadastre-se</div>
+                <form method="post" action="cadContra.php">
+                <div class="input_white">
+                    <input type="text" name="user1" id="user" placeholder="Nome de usuário" maxlength="12" required="required" />
+                    <input type="text" name="email1" id="email" placeholder="Insira o email" maxlength="20" required="required" />
+                    <div class="msgemail"></div>
+                    <input type="password" name="password1" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+                </div>
+                    <div class="content_tab_heading">Converse com um Freelancer disponível</div>
+                    <div>
+                        <button class="done_btn" type="submit">Concluir</button>
                     </div>
-                        <div>Converse com um Freelancer disponível</div>
-                        <div>
-                            <button class="done_btn" type="submit">Concluir</button>
-                        </div>
-                    </form>       
-                    <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="termos e condições">termos e condições</a> e <a href="política">política de privacidade</a></div>
+                </form>       
+                <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="termos e condições">termos e condições</a> e <a href="política">política de privacidade</a></div>
             </div>
-        </section>
-        <section class="content_tab_2">
+        </div>
+        <div class="content_tab_2">
             <div class="content_tab">
-                Cadastre-se
+                <div class="content_tab_heading">Cadastre-se</div>
                 <form method="post" action="cadFunc.php">
                     <div class="input_white">
                         <input type="text" name="user2" id="user" placeholder="Nome de Usuário" maxlength="12" required="required" />
@@ -91,7 +98,7 @@ if (isset($_POST['btnLogin'])) {
                         <div id="msg2email"></div>
                         <input type="password" name="password2" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
                     </div>
-                    <div>Escolha o tipo de serviço</div>
+                    <div class="content_tab_heading">Escolha o tipo de serviço</div>
                     <div class="input_white">
                         <select name="work">
                             <option value="invalid" disabled selected hidden>Selecione uma categoria de trabalho</option>
@@ -99,12 +106,12 @@ if (isset($_POST['btnLogin'])) {
                             <option value="second">Second</option>
                         </select>
                     </div>
-                    <div>Converse com um Freelancer disponível</div>
+                    <div class="content_tab_heading">Converse com um Freelancer disponível</div>
                     <div><button class="done_btn" type="submit">Concluir</button></div>
                 </form>
                 <div class="terms">*Ao pressionar em "Concluir", você estará aceitando os <a href="#">termos e condições</a> e <a href="#">política de privacidade</a></div>
             </div>
-        </section>
+        </div>
     </div>
 
     <div class="footer" class="footer">
@@ -115,10 +122,10 @@ if (isset($_POST['btnLogin'])) {
                 <div class="footer_menu">
                     <ul>
                     <li class="footer_info_header">+ informações</li>
-                    <li><a href="comofunciona.php" class="login">Como Funciona</a></li>
-                    <li><a href="taxas.php" class="login">Taxa e Encargos</a></li>
-                    <li><a href="central.php" class="login">Central de Ajuda</a></li>
-                    <li><a href="#" class="login">Contate-nos</a></li>
+                    <li><a href="comofunciona.php" class="btn">Como Funciona</a></li>
+                    <li><a href="taxas.php" class="btn">Taxa e Encargos</a></li>
+                    <li><a href="central.php" class="btn">Central de Ajuda</a></li>
+                    <li><a href="#" class="btn">Contate-nos</a></li>
                     </ul>
                 </div>
             
@@ -137,7 +144,7 @@ if (isset($_POST['btnLogin'])) {
             </div>
             
         </div>
-        <div class="footer_rights">COPYRIGHT © 2016 WARPR - TODOS OS DIREITOS RESERVADOS | <a class="login" href="#">POLÍTICA DE PRIVACIDADE</a> | <a class="login" href="#">TERMOS E CONDIÇÕES</a></div>
+        <div class="footer_rights">COPYRIGHT © 2016 WARPR - TODOS OS DIREITOS RESERVADOS | <a class="btn" href="#">POLÍTICA DE PRIVACIDADE</a> | <a class="btn" href="#">TERMOS E CONDIÇÕES</a></div>
     </footer>
     </div>
 </body>
