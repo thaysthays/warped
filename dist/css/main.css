@@ -21,11 +21,13 @@ html {
 }
 
 body {
+    background-color: #b9b9b9;
+    background: #222222 url('https://images.unsplash.com/photo-1523630952057-35a9379ba09d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0c13f2bfbf054de2d99b5356869a4581&auto=format&fit=crop&w=1350&q=80') no-repeat top center fixed;
+    background-size: cover;
     position: relative;
     min-height: 100%;
     font-family: 'Montserrat';
     font-size: 16px;
-    background-color: #AAA;
 }
 
 .centered_logo {
@@ -49,6 +51,37 @@ body {
 .container:after {
     content: '';
     display: table;
+    clear: both;
+}
+
+.content {
+    margin-top: 60px;
+    padding: 80px 0px;
+    background-color:#FFF;
+    color: #385279;
+}
+
+.content_text {
+    line-height: 24px;
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+}
+
+.content_text:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+}
+
+.content_text:last-child {
+    margin-right: 0;
+}
+
+.content_text:nth-child(2n) {
+    margin-right: 0;
+    float: right;
+}
+
+.content_text:nth-child(2n + 1) {
     clear: both;
 }
 

@@ -56,7 +56,7 @@ if (isset($_POST['btnLogin'])) {
 
     <div class="container">
         <div class="container">
-            <div><img src="img/warprgrey.png" class="centered_logo"></div>
+            <div><img src="img/warprwhite.png" class="centered_logo"></div>
         </div>
 
         <div class="tab_comp">
@@ -70,10 +70,10 @@ if (isset($_POST['btnLogin'])) {
                     <div class="content_tab_heading">Cadastre-se</div>
                     <form method="post" action="cadContra.php">
                     <div class="input_white">
-                        <input type="text" name="user1" id="user" placeholder="Nome de usuário" maxlength="12" required="required" />
-                        <input type="text" name="email1" id="email" placeholder="Insira o email" maxlength="20" required="required" />
+                        <input type="text" name="user1" class="user" placeholder="Nome de usuário" maxlength="12" required="required" />
+                        <input type="text" name="email1" class="email" placeholder="Insira o email" maxlength="20" required="required" />
                         <div class="msgemail"></div>
-                        <input type="password" name="password1" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+                        <input type="password" name="password1" class="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
                     </div>
                         <div class="content_tab_heading">Converse com um Freelancer disponível</div>
                         <div>
@@ -88,10 +88,10 @@ if (isset($_POST['btnLogin'])) {
                     <div class="content_tab_heading">Cadastre-se</div>
                     <form method="post" action="cadFunc.php">
                         <div class="input_white">
-                            <input type="text" name="user2" id="user" placeholder="Nome de Usuário" maxlength="12" required="required" />
-                            <input type="email" name="email2" id="email" placeholder="Insira o Email" maxlength="20" required="required" />
+                            <input type="text" name="user2" class="user" placeholder="Nome de Usuário" maxlength="12" required="required" />
+                            <input type="email" name="email2" class="email" placeholder="Insira o Email" maxlength="20" required="required" />
                             <div id="msg2email"></div>
-                            <input type="password" name="password2" id="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
+                            <input type="password" name="password2" class="senha" placeholder="Insira sua senha" maxlength="15" required="required" />
                         </div>
                         <div class="content_tab_heading">Escolha o tipo de serviço</div>
                         <div class="input_white">
@@ -108,6 +108,16 @@ if (isset($_POST['btnLogin'])) {
                 </div>
             </div>
         </div>    
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="content_text">
+                Surely to some flows so meant my shall goes i hand hand goes it but meant you whole sea whole to goes to help to whole meant so but to be the it love but sin rush whole sea be river river if it falling if for a for goes the the hand if the but said whole hand flows only falling to but river like cant falling sin sin cant help you like man if i sin so fools flows rush shall love the it fools surely to some flows so meant my shall goes i hand hand goes it but meant you whole sea whole to goes to help to whole meant so but to be the it love but sin rush whole sea be river river if it falling if for a for goes the the hand if the but said whole hand flows only falling to but.
+            </div>
+
+            <img src="" alt="">
+        </div>
     </div>
 
     <div class="footer" class="footer">
